@@ -29,4 +29,5 @@ The action is a ndarray with shape (1,) which can take values {0, 1}.
 | 3       | Top pipe edge position             | -600       | 600       |
 | 4       | Bottom pipe edge position          | 0          | 600       |     
 
-
+### Rewards
+Since the goal is to score as much as possible, every frame our agent stays alive it gets a reward of +0.2. If our agent collides with one of the pipes, a reward of -10 is applied. If it touches the ground, or flies too high, -5 reward. Although if our agent passes through the gap between upper and lower pipes reward is incremented by 1 i.e. +1. Every jump results in -0.1 reward to avoid unnecessary flaps. If agent's vertical axis is 75% close to vertical axis of pipes gap +0.4 reward and if 50% close +0.2 reward. 
