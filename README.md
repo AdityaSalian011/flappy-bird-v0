@@ -16,7 +16,9 @@ https://github.com/user-attachments/assets/e4e5528f-9a3a-4e29-9ebc-1c03f76a1024
 In this custom environment, the goal is to help the agent pass through the gap between the upper and lower pipes. Each successful pass increases the score by 1. If the agent hits a pipe, touches the ground, or flies too high, the game restarts.
 
 ### Action Space
-The action is a ndarray with shape (1,) which can take values {0, 1} indicating if the agent should be at rest or should jump.
+The action is a ndarray with shape (1,) which can take values {0, 1}.
+- 0: Agent Stays at Rest
+- 1: Agent Jumps
 
 ### Observation Space
 | **Num** | **Observation**                    | **Min**    | **Max**   |
@@ -26,3 +28,5 @@ The action is a ndarray with shape (1,) which can take values {0, 1} indicating 
 | 2       | Horizontal distance to next pipe   | -400* 2    | 400* 2    |
 | 3       | Top pipe edge position             | -600       | 600       |
 | 4       | Bottom pipe edge position          | 0          | 600       |     
+
+
