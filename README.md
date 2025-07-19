@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/e4e5528f-9a3a-4e29-9ebc-1c03f76a1024
 | **Space**              | **Details**                                                                                                                                         |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Action Space           | `Discrete(2)`                                                                                                                                       |
-| Observation Space      | `Box(` <br> `low = np.array([MIN_PLAYER_Y, MIN_VELOCITY, -window_w*2, -window_h, 0], dtype=np.float32),` <br> `high = np.array([MAX_PLAYER_Y, MAX_VELOCITY, window_w*2, window_h, window_h], dtype=np.float32),` <br> `shape = (5,),` <br> `dtype = np.float32` <br> `)` |
+| Observation Space      | `Box([-64, -10, -400* 2, -600, 0], [536, 20, 400* 2, 600, 600], (5,), float32)`                                                                     |
 
 ### Description
 In this custom environment, the goal is to help the agent pass through the gap between the upper and lower pipes. Each successful pass increases the score by 1. If the agent hits a pipe, touches the ground, or flies too high, the game restarts.
